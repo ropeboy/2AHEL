@@ -1,27 +1,31 @@
 #include <stdio.h>
 
 int main()
-
 {
-    float a;
-    float b = 20;
+    int zahl;
+    int loesung = 20;
+    int versuche = 10;
+    int richtig = 0;
+    for (int i = 0;((i < 10)&&(richtig == 0)); i++)
+    {
+        printf("Gib zahl an: ");
+        scanf("%d", & zahl);
 
-    printf("Gib a an: ");
-    scanf("%f", & a);
+        printf("zahl betraegt %d: ).", zahl);
 
-    printf("a betraegt %f und die b betraegt %f:).", a, b);
-
-    if(b == a)
-    (
-        printf(" Die beiden Zahlen sind gleich groes!")
-    );
-    if(a > b)
-    (
-        printf(" Deine Zahl ist groeser!")
-    );
-    if(a < b)
-    (
-        printf(" Deine Zahl ist kleiner!")
-    );
+        if (zahl > loesung)
+        {
+            printf(" Deine Zahl ist groeser!");
+        }
+        else if (zahl < loesung)
+        {
+            printf(" Deine Zahl ist kleiner!");
+        }
+        else
+        {
+            printf(" Die beiden Zahlen sind gleich groes!"); 
+            richtig = 1;
+        }
+    }    
     return 0;
 }
