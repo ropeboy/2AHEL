@@ -2,6 +2,9 @@
 
 int main()
 {
+    srand(time(NULL));
+    int max_zahl = 100;
+    const int loesung = (rand() % max_zahl);
     int zahl;
     int loesung = 20;
     int versuche = 10;
